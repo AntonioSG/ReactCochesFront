@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { Coche } from '../types/types';
 
-const API_URL = 'http://localhost'; // Reemplaza con tu URL base
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const getCoches = async (): Promise<Coche[]> => {
   const response = await axios.get(`${API_URL}/coches`);
